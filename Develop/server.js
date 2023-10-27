@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 // const api = require('./server.js');
+const fs = require('fs');
 const notes = require('./db/db');
+const uuid = require('../helpers/uuid');
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,21 +30,47 @@ app.get('*', (req, res) =>
 
 app.post('/api/notes', (req, res) => {
   console.info(`${req.method} request received to add a note`);
-  let response;
 
+  const { title, text } = req.body;
 
-  if (req.body && req.body.product) {
-    response = {
-      data: req.body,
+  if (title && text) {
+    const newNote = {
+      title,
+      text,
+      review_id: uuid(),
     };
-    res.json(`Review for ${response.data.product} has been added!`);
+
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const parsedNotes = JSON.parse(data);
+
+        parsedNotes.push(newNote);
+
+        fs.writeFile(
+          './db/db.json',
+          JSON.stringify(parsedNotes, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully updated notes!')
+        );
+      }
+    });
+
+    const response = {
+      status: 'success',
+      body: newNote,
+    };
+
+    console.log(response);
+    res.status(201).json(response);
   } else {
-    res.json('Request body must at least contain a product name');
+    res.status(500).json('Error in posting note');
   }
-
-
-  console.log(req.body);
 });
+
 app.listen(PORT, () =>
   console.log(`Now listening at http://localhost:${PORT}`)
 );
