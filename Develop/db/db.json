@@ -1,8 +1,26 @@
-
-
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Order dog food.",
+        "text": "Request autoship on Chewy"
+    },
+    {
+        "title": "Grocery shop.",
+        "text": "Milk, eggs, fish, orange juice"
+    },
+    {
+        "title": "Clean the house.",
+        "text": "Dust, vacuum, mop"
+    },
+    {
+        "title": "Schedule lunch on Saturday",
+        "text": "Schedule lunch with Sarah"
+    },
+    {
+        "title": "Read a book",
+        "text": "Read Harry Potter"
+    },
+    {
+        "title": "Watch a movie",
+        "text": "Watch Lord of the Rings"
     }
 ]
