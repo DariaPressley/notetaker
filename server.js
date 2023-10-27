@@ -20,7 +20,7 @@ app.get('/api/notes', async (req, res) => {
 });
 
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/notes.html'))
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 app.post('/api/notes', async (req, res) => {

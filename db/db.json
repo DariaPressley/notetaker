@@ -1,51 +1,27 @@
 [
     {
-        "title": "Order dog food.",
-        "text": "Request autoship on Chewy"
+        "title": "Test Note 1",
+        "text": "Note 1\n",
+        "id": "24c8"
     },
     {
-        "title": "Grocery shop.",
-        "text": "Milk, eggs, fish, orange juice"
+        "title": "Test Note 2",
+        "text": "Note 2\n",
+        "id": "1c11"
     },
     {
-        "title": "Clean the house.",
-        "text": "Dust, vacuum, mop"
+        "title": "Test Note 3",
+        "text": "Note 3",
+        "id": "5dd4"
     },
     {
-        "title": "Schedule lunch on Saturday",
-        "text": "Schedule lunch with Sarah"
+        "title": "Test Note 4",
+        "text": "Note 4",
+        "id": "0bf7"
     },
     {
-        "title": "Read a book",
-        "text": "Read Harry Potter"
-    },
-    {
-        "title": "Watch a movie",
-        "text": "Watch Lord of the Rings"
-    },
-    {
-        "title": "test note 4",
-        "text": "test note 4\n",
-        "id": "be2c"
-    },
-    {
-        "title": "New Note",
-        "text": "new note 1",
-        "id": "5021"
-    },
-    {
-        "title": "Note 5",
-        "text": "new note 5",
-        "id": "b9ae"
-    },
-    {
-        "title": "new note 6",
-        "text": "note 6",
-        "id": "7960"
-    },
-    {
-        "title": "new note 7",
-        "text": "new note 7",
-        "id": "85d2"
+        "title": "Test Note 5",
+        "text": "Note 5",
+        "id": "ae30"
     }
 ]
